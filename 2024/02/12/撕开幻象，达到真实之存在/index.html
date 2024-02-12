@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="hiAMigo">
+
+
+
+
+
+<title>撕开幻象，达到真实之存在 | Hexo</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">hiAMigo&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">hiAMigo&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">撕开幻象，达到真实之存在</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">hiAMigo</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">February 12, 2024&nbsp;&nbsp;21:11:06</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E6%96%87%E5%AD%A6%E8%AF%84%E8%AE%BA/">文学评论</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p><img src="/2024/02/12/%E6%92%95%E5%BC%80%E5%B9%BB%E8%B1%A1%EF%BC%8C%E8%BE%BE%E5%88%B0%E7%9C%9F%E5%AE%9E%E4%B9%8B%E5%AD%98%E5%9C%A8/1.jpg" alt="1"></p>
+<p>目录</p>
+<p>*综评</p>
+<p>*打牌，骂人，开战——命运的荒谬</p>
+<p>*重构的希望</p>
+<h2 id="综评"><a href="#综评" class="headerlink" title="综评"></a>综评</h2><p>作者以细致入微之笔描绘出一幅粗犷，野蛮，充满暴力和杀戮的战场。在遍布着铁丝网，淤泥，黄绿色的毒雾，血染的池塘，消失的森林，遍地的残尸，彻底的毁灭的战争之中，一代青年经历了思想上的崩解和对旧思想的否定：面对着初上战场时看到的血腥的，令人毛骨悚然的画面，回想起战前的食禄者的教导，幻想与现实的张力撕碎了主观的能力，使得这些青年沉溺于迷惘，在战争中，人唯一无法怀疑的就是战友的情感和求生的本能，他们也就是凭此熬到了战争的结束，并最终重获了直面当下的现实的勇气</p>
+<p>只是平静的面对生活，我并不认为结尾是美好的，相反地，它使得我们失去了对真正意义上地重构的热忱。即我们的主人公在看尽一切谎言和幻象所编织的巨大的机器后，唯一能做的只有把自身从中抽离出来，不被其蒙蔽真实的情感，但是也仅仅是到此了，主人公在最后还是退回到无力与迷惘之中。或者说，主人公不过是从无意识中走出机器，但即便是走出了机器，那个机器还是在那里，还是作为一个神秘而巨大的深渊在不断地凝视着他，在其中时并未发现自身的弱小，而走出后因发现差异而绝望。</p>
+<p>我认为我们不应当认为我们应该停留在保罗的思想的层面上。诚然，正如我刚才所说，他至少从无意识的幻象中走了出来，透过意识形态的裂隙隐约的看到了那个庞大机器的模糊轮廓，但是，那更加深不可测之深使他绝望，以至于其失去了建构自身以抵抗巨物的热忱。</p>
+<p>因此在这篇文章中，我将会谈谈对这一机器和其运转机制的浅薄认识，战争对人的影响，并从中看出我们应当如何去行动。</p>
+<p>将伦理学的热忱抢夺回来！</p>
+<h2 id="打牌，骂人，开战——荒谬的命运"><a href="#打牌，骂人，开战——荒谬的命运" class="headerlink" title="打牌，骂人，开战——荒谬的命运"></a>打牌，骂人，开战——荒谬的命运</h2><p>那些容克们：</p>
+<p><em>一道命令就能让这些沉默的身影变为我们的敌人，或变为我们的朋友。某张桌子上放着一份我们无从知晓的某人签署的文件。于是本该遭世人蔑视、受到最高制裁的罪恶成了我们持续多年的至高目标。</em></p>
+<p><em>”我说着连自己都不相信的话。宪兵，警察，税收，这就是你们的国家。要是你说的是这些，那我谢谢你告诉我。”</em></p>
+<p><em>”</em></p>
+<p>保罗说，“打牌，骂人，开战，对我们这一切并不算多——但又太多了。”被战争扫清了以往身上的一切文明的年轻的孩子们只能做着这些开起来没什么内容的无趣的事情。但是戏谑的是，真正使得他们落入如此窘态的，真正把握着他们的生死命运的机制亦是如此——不过是上层人的“打牌，骂人，开战”，那些容克们并不更加文明，相反地，他们做着的是比一般的人民更加无耻和低级的事。为了维持自身利益的稳定，更进一步地为了攫取更多的利益，容克们算计着自己的底牌，当表面上风平浪静的博弈进入最后阶段，当一定有几方必须要将自己的利益让渡给另几方时，突然，不满自身作为利益再分配的失败方掀翻牌桌，掀起了暴力的战争！在这个过程中骂战和角力同时进行，骂战使得整个国家的人民欲望容克们所欲望之物，使得人们认不清现实。不管怎样，最终站到战场上的士兵——那些和平时期的工人，小手工业者，学生们——与这场战争所真正能获得的东西毫无关系，那些利益最终还是会跑到容克们的手中。</p>
+<p><strong>康拓列克们：</strong></p>
+<p>因为教育让人变蠢。他说这话，可是经过了深思熟虑。康托列克，他们都坚信，他们正以适合自己的方式做着最好的事。这正是我们感到失望的地方，他们本应引领我们这些十八九岁的年轻人走向成人世界，本应成为我们走向职业、职责、文化，走向进步世界和未来的领路人。第一阵猛烈的炮火，让我们认识到我们的错误，而他们教给我们的世界观也随之崩塌。</p>
+<p>而康托列克们，正是骂战中不可缺少的一环：当舆论被全国当中顶着最聪明脑袋的人生产出来之后，康托列克们就要肩负起宣传思想的“伟大事业”了！康托列克们只是迷信着“那些牺牲的，负伤的都是钢铁青年”，这是在用话语将别人塑造成一个幻象。康托列克们自认为这些话语是自身感悟出来，但事实上他们早已被主人话语所捕获，他们早已认不清现实了，他们的脑中没有一点彰显自身的东西，实际上他们现在仅仅是一个传声筒了！康托列克们作为教育者，首先要做的就是去审视自己所宣传的观念的合理性。如果他们是明智的，他们就会发现战争是被我上述说的那些原初的，恶心的机制所支配的，他们便会自然地投入到反对的队列之中。教育者必须要全面的认清自己的思想的全貌——这些东西是为谁服务？当然，远不止这些。</p>
+<p><strong>西摩尔史托斯们：</strong></p>
+<p>“不光是西摩尔史托斯，很多人都这样。一戴上绶带或军刀，立即变成另一个人，就像吃了水泥。”</p>
+<p>西摩尔史托斯们是这一巨大机器运转起来的最重要的一环，他们将容克们和人们中介起来。西摩尔史托斯们是没有自我的，他们只有自我的幻觉，换句话说，他们将覆盖着他者的欲望的套子作为他们的自我，以实现自我的欲望的满足。他们在和平时期，自己无法成为他人眼中有“声望的人”而始终压抑着自身欲望的满足，一旦“带上绶带”，成为了别人所欲望的对象，他们就会完全地将自己交给“套子”，他们的一切行为都是按照他者的欲望而进行，在这里他们不过是巨大机器蒙蔽人们的一个个齿轮，通过欲望他者的欲望使得容克们的欲望下放，进而使得上层和民众间的关系在个人身上在生产出来</p>
+<p><strong>保罗们：</strong></p>
+<p><em>对。不过想想看，我方几乎全是普通人。法国战场上也绝大多数是工人、手工业者和小职员。没人问过他们对战争的看法，就像没人问我们。</em></p>
+<p><em>“我们在这儿，是为了保卫我们的祖国。可法国人在那儿，也是为了保卫他们的祖国。到底谁是对的？” “也许双方都对。</em></p>
+<p>他们更有人性。我甚至认为，比起我们来，他们彼此更像兄弟。也可能他们认为他们比我们更为不幸。无论如何，战争对他们来说已经结束了</p>
+<p>要是我能活下来，战友，我要跟毁掉我们的一切斗争到底。它毁的是你的生命，而我的呢？也是生命。我向你保证，战友，这种事绝不能再发生。”</p>
+<p>保罗们在这里是对传统的，战争未发生时的完整运行的意识形态的否定，他们从真实的战场上看到了那些意识形态的虚假，面对他们的是生存，而非虚伪的文明。当一切由这一巨大机器加之在自己身上的东西脱落时，他们重新面对无物可信的境况，紧接着要保存自己，要生存，要保留可以重新建构自身之基底。我们切不可认同保罗的“战争使得退化了几千年”和“战争使人重新变为野兽”的想法，我们应当认为我们要建构一个新的体系——这正是保罗们所缺乏的。保罗们缺乏建构的热忱，因此会陷入迷茫，他看清了原本的一切虚假，却不知怎么打破它！如果我们有这样的建构的热忱的话，那么这种在保罗看来是“野兽般的”生存行为便会变得有所指向——它的确是为了保存自己，但它也不会仅停留在保存自己，保存自己是为了未来的一个新建构的体系有其所依的基础。另外，在战争中的生存也并非是一种倒退，相反的，据我刚才所说，如果有重建新秩序的热忱和意识，这反而是一种进步的开端——因为，战时后方容克们的“文明”不过是其不费力的沉溺在旧体系下的幻梦的结果，而保罗们面对了现实，抛开了虚幻的幻象，知道所谓“我是我”，因此这种自我保全是为了保全“我”——这个“我”不再是他人令我成为其欲望所是的虚假的“我”，而是真正的由自我建构的我，具有主体性的我，因此这不是一种倒退，反而是一种进步的开端，但可惜的是，保罗没能继续走下去</p>
+<p>第二点是保罗们发现了战争对人的异化：“我是为我的正在奋战的弟兄们而战，而不是为了容克们”。在这里吸引我们的是共同的感情是一种没有被异化的作为人的最纯粹的情感，相反的，成人的世界并非没有了这样的感情，这种感情不过是被掩盖了起来，被无数的外物所异化，被他人之所欲引向一种错误的道路，使得我们只能站在外面看到自己的最本真的感情，并使得我们将其误认为是外部异质性之物 现在的我们看不到边界，也不认同哪里是终点，我们的血液中有期待，它使得我们与一天天的经历融为一体。 就是在如此的年纪，这样的一群年轻被强制的拉进了战争的漩涡，被拉入了上层的利益斗争之中，原本尚有苗头的伦理学热忱被他者的欲望所摧毁，他们摔入了无目的的一隅，他们能做的只是发声，而我们可以做的更多。</p>
+<p><strong>城市里的人们：</strong></p>
+<p>他们争论着我们该吞并哪里。接着他开始阐释，哪里是法国的突破口。谈话间，他转向我：“用你们持续的阵地战再向前推进一些。把那帮家伙赶出去，这样才能和平。”</p>
+<p>有些人提问，有些人不问。看得出，那些不问的人为自己的沉默感到骄傲。他们甚至常常摆出无所不知的架势，认为那不值一谈。他们真自负！</p>
+<p>他们中没有一个人能全身心地去感受。而我甚至无法确切地说出我的见解。</p>
+<p>在这里，保罗们点出了“感受”一词，完全的感受是建构主体性的方法，保罗们完成了这个工作。感知力或者说是审思自己和外界的能力是避免被他者欲望俘获和获得主体性的开端</p>
+<p>重构的希望</p>
+<p>我站起身。<br>我非常镇静。让月复一月、年复一年的时光来临吧，它们不会再拿走我什么东西，它们再也不可能拿到我什么东西了。我现在是那样孤独，那样没有希望，到可以无所畏惧地面对它们了。我这些年来所经历的生活，如今仍然摸得到，看得到。我是否已经战胜了它，现在还不知道。但是只要它仍在那儿，它就会寻找自己的路，无论我心中的“我”说什么，愿意还是不愿意。<br>他于1918年10月阵亡，那一天整个前线是如此平静和沉寂，所以军队指挥部的战报上仅仅写着这样一句话：西线无战事。<br>他是向前面倒下去的，躺在地上仿佛睡着了一样。人们把他翻过来，看到他可能没有遭受多长时间的痛苦；他的脸上有一种沉着的表情，差不多像是满意的样子，因为事情终于这样结束了。</p>
+<p>既然“我”早已一无所有，被剥得干干净净，它们又如何<strong>再</strong>从“我”那里得到什么东西呢？这也是斯宾诺莎的态度：既然没有希望也就没有失望用。也是鲁迅意义上的“绝望之为虚妄，正与希望相同！“</p>
+<p>无惧地面对旧的体系，是因为完整地看到了旧的体系的致命的漏洞，这是一种基于现实的理想——彰显着历史的必然！因此才会“会寻找自己的路“。但是，这路是理想，是未来的现实，本没有的路，走的人多了，终将成为路！</p>
+<h2 id="王事将盬"><a href="#王事将盬" class="headerlink" title="王事将盬"></a>王事将盬</h2><p>我并不认为所谓“王事靡盬“是看清现实后的最后的结论：在说这句话时，是否自问过为何不断地发生，其背后的发生学机制又是如何？这些问题已经能够把我们的问题域扩大，因而”王事将盬“并不是”王事靡盬“的否定，而是一个更大的东西，因为”将盬“是考虑过更多问题后的结论，相对于”靡盬“是更加先进的，当然，我不是说”靡盬“就是错的，这之间有一个不易被察觉的东西即是否审思——审思是重要的，这在上面也重点提到过。</p>
+<p>“王事将盬“，但我们不知道何时，但幸运的是，我们在保罗们之上进了一步，大概知道了努力的方向。这里限于内容限定和篇幅就不多谈了。</p>
+<p><img src="/2024/02/12/%E6%92%95%E5%BC%80%E5%B9%BB%E8%B1%A1%EF%BC%8C%E8%BE%BE%E5%88%B0%E7%9C%9F%E5%AE%9E%E4%B9%8B%E5%AD%98%E5%9C%A8/2.jpg" alt="2"></p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>hiAMigo</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://deanjean2.github.io/2024/02/12/%E6%92%95%E5%BC%80%E5%B9%BB%E8%B1%A1%EF%BC%8C%E8%BE%BE%E5%88%B0%E7%9C%9F%E5%AE%9E%E4%B9%8B%E5%AD%98%E5%9C%A8/">http://deanjean2.github.io/2024/02/12/%E6%92%95%E5%BC%80%E5%B9%BB%E8%B1%A1%EF%BC%8C%E8%BE%BE%E5%88%B0%E7%9C%9F%E5%AE%9E%E4%B9%8B%E5%AD%98%E5%9C%A8/</a></span>
+                    </p>
+                
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>如何生而不朽?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/%E8%A5%BF%E7%BA%BF%E6%97%A0%E6%88%98%E4%BA%8B/"># 西线无战事</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2024/02/12/%E5%88%A9%E7%94%A8python%E6%89%B9%E9%87%8F%E5%8C%96%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6/">利用python批量化处理文件</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© hiAMigo | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
