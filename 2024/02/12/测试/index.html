@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="hiAMigo">
+
+
+
+
+
+<title>测试 | Hexo</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+            <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+        
+    
+
+
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">hiAMigo&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">hiAMigo&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">测试</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">hiAMigo</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">February 12, 2024&nbsp;&nbsp;13:30:14</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>[知乎](<a target="_blank" rel="noopener" href="https://www.zhihu.com/people/wu-dian-gong-yuan-41">(94 封私信 &#x2F; 16 条消息) 五点共圆 - 知乎 (zhihu.com)</a>)</p>
+<p>![1 (2)](C:\Users\25325\Pictures\Camera Roll\1 (2).jpg)</p>
+<p><code>Properties. (1) \(\varlimsup_&#123;n \rightarrow \infty&#125; A_n=\left\&#123;x: x \in A_n\right.\) for infinitely many \(\left.n\right\&#125;\). (2) \(\varliminf_&#123;n \rightarrow \infty&#125; A_n=\left\&#123;x: x \in A_n\right.\) for all but finitely many \(\left.n\right\&#125;\). (3) \(\bigcap_&#123;n=1&#125;^&#123;\infty&#125; A_n \subset \varliminf_&#123;n \rightarrow \infty&#125; A_n \subset \varlimsup_&#123;n \rightarrow \infty&#125; A_n \subset \bigcup_&#123;n=1&#125;^&#123;\infty&#125; A_n\).</code><br>$$<br>Properties.<br>(1) (\varlimsup_{n \rightarrow \infty} A_n&#x3D;\left{x: x \in A_n\right.) for infinitely many (\left.n\right}).<br>(2) (\varliminf_{n \rightarrow \infty} A_n&#x3D;\left{x: x \in A_n\right.) for all but finitely many (\left.n\right}).<br>(3) (\bigcap_{n&#x3D;1}^{\infty} A_n \subset \varliminf_{n \rightarrow \infty} A_n \subset \varlimsup_{n \rightarrow \infty} A_n \subset \bigcup_{n&#x3D;1}^{\infty} A_n).<br>$$<br><em><strong>以上显示出一个问题：</strong></em></p>
+<p><em><strong>anki所能识别的是\（型识别头</strong></em></p>
+<p><em><strong>而md只能识别美元头</strong></em></p>
+<p>$$<br>证明. 直接利用上述定理即可. 特别地, 如果 $f_y(x, y)$ 是 $[a, b] \times[c, d]$ 上的连续函数, 利用微分中值定理可知推论的结论成立.</p>
+<p>例 16.1.1. (*) 设 $f$ 为具有紧支集的一元光滑函数, $g$ 在任意有限区间上可积,定义函数 $h$ 为<br>$$<br>h(x)&#x3D;\int_{-\infty}^{+\infty} f(x-y) g(y) d y,<br>$$</p>
+<p>则 $h$ 为光滑函数, 且<br>$$<br>h^{(n)}(x)&#x3D;\int_{-\infty}^{+\infty} f^{(n)}(x-y) g(y) d y .<br>$$<br>证明. 设 $f$ 在区间 $(-M, M)$ 以外为零. 任取 $a&gt;0$, 当 $x \in[-a, a]$ 时, $h(x)$ 可以表示为<br>$$<br>h(x)&#x3D;\int_{-M-a}^{M+a} f(x-y) g(y) d y,<br>$$<br>反复利用上述推论即知 $h(x)$ 在 $(-a, a)$ 上任意次可导, 且<br>$$<br>h^{(n)}(x)&#x3D;\int_{-M-a}^{M+a} f^{(n)}(x-y) g(y) d y&#x3D;\int_{-\infty}^{+\infty} f^{(n)}(x-y) g(y) d y,<br>$$<br>由于 $a&gt;0$ 是任取的, 故 $h$ 在 $(-\infty,+\infty)$ 上是光滑函数.<br>注. $f$ 可以取为鼓包函数, 此时 $h$ 可以看成函数 $g$ 的光滑逼近.<br>$$</p>
+<p> 设 (0&lt;a&lt;1), 当 (\lambda \in[-a, a]) 时, (f(x, \lambda)&#x3D;\ln (1+\lambda \cos x)) 以及<br>$$<br>f_\lambda(x, \lambda)&#x3D;\frac{\cos x}{1+\lambda \cos x}<br>$$</p>
+<p>年 ([0, \pi] \times[-a, a]) 上连续, 于是 (I&#x3D;I(\lambda)) 关于 (\lambda) 可微, 且<br>$$<br>I^{\prime}(\lambda)&#x3D;\int_0^\pi \frac{\cos x}{1+\lambda \cos x} d x&#x3D;\frac{\pi}{\lambda}-\frac{\pi}{\lambda \sqrt{1-\lambda^2}} .<br>$$</p>
+<p>讨 (\lambda) 积分可得<br>$$<br>I(\lambda)&#x3D;\pi \ln \left(1+\sqrt{1-\lambda^2}\right)+C,<br>$$</p>
+<p>$$<br>5. * 存在整函数 $F$ 具有 “通用的” 性质: 任给的整函数 $h$, 存在单调递增的正整数列 $\left{N_k\right}_{k&#x3D;1}^{+\infty}$ 使得在复数集 $\mathbf{C}$ 中的任意紧子集中<br>$$<br>\lim _{n \rightarrow+\infty} F\left(z+N_k\right)&#x3D;h(z)<br>$$</p>
+<p>是一致的.<br>(a) 令 $p_1, p_2, \cdots$ 为多项式集族，其系数的实部与虚部都是有理数. 证明：总能找到整函数 $F$ 和单调递增的正整数列 $\left{M_n\right}$, 使得当 $z \in D_n$ 时满足<br>$$<br>\left|F(z)-p_n\left(z-M_n\right)\right|&lt;\frac{1}{n},<br>$$</p>
+<p>其中 $D_n$ 表示以 $M_n$ 为中心, $n$ 为半径的圆盘.<br>$$</p>
+<p>###s</p>
+<p>定理 1.3 如果 (z_0) 点是函数 (f) 的 (n) 阶极点, 那么<br>$$<br>f(z)&#x3D;\frac{a_{-n}}{\left(z-z_0\right)^n}+\frac{a_{-n+1}}{\left(z-z_0\right)^{n+1}}+\cdots+\frac{a_{-1}}{\left(z-z_0\right)}+G(z),<br>$$</p>
+<p>其中, (G) 是定义在 (z_0) 的某邻域中的全纯函数.</p>
+<p>证明 下面的证明来自前面定理中的乘性表现. 事实上, 函数 (h) 可以展成幂级数<br>$$<br>h(z)&#x3D;A_0+A_1\left(z-z_0\right)+\cdots,<br>$$</p>
+<p>使得<br>$$<br>\begin{aligned}<br>f(z) &amp; &#x3D;\left(z-z_0\right)^{-n}\left(A_0+A_1\left(z-z_0\right)+\cdots\right) \<br>&amp; &#x3D;\frac{a_{-n}}{\left(z-z_0\right)^n}+\frac{a_{-n+1}}{\left(z-z_0\right)^{n-1}}+\cdots+\frac{a_{-1}}{\left(z-z_0\right)}+G(z)<br>\end{aligned}<br>$$</p>
+<p>和<br>$$<br>\frac{a_{-n}}{\left(z-z_0\right)^n}+\frac{a_{-n+1}}{\left(z-z_0\right)^{n-1}}+\cdots+\frac{a_{-1}}{\left(z-z_0\right)}<br>$$</p>
+<p>$$<br>平面中弧 $\gamma$ 的方程用参数形式来表示最为方便, 那就是 $x&#x3D;x(t), y&#x3D;y(t)$,其中 $t$ 取值于区间 $\alpha \leqslant t \leqslant \beta$, 且 $x(t) 、 y(t)$ 都是连续函数. 我们也可以用复数记法 $z&#x3D;z(t)&#x3D;x(t)+ i y(t)$, 这一记法有若干方便的地方. 习惯上也常把弧 $\gamma$ 与 $[\alpha, \beta]$ 的连续映射等同起来. 按照这种习惯, 最好把映射记为 $z&#x3D;\gamma(t)$.</p>
+<p>把一段弧看成是一个点集，那么它就是一个有穷闭区间在一连续映射下的象. 所以它是紧致的, 也是连通的. 但是, 一段弧还不仅仅是一个点集, 更主要的它还是一个点列, 按参数的递增值排出顺序. 如果一个非降函数 $t&#x3D;\varphi(\tau)$ 将区间 $\alpha^{\prime} \leqslant \tau \leqslant \beta^{\prime}$ 映成 $\alpha \leqslant t \leqslant \beta$, 则 $z&#x3D;z(\varphi(\tau))$ 所定义的有序点列就和 $z&#x3D;z(t)$ 所定义的点列相同. 我们说第一个方程是由第二个方程经参数变换而产生的. 要使这一变换是可逆的, 当且仅当 $\varphi(\tau)$ 为严格递增. 例如, 方程 $z&#x3D;t^2+i t^4(0 \leqslant t \leqslant 1)$ 就是由参数的可逆变换从方程 $z&#x3D;t+ i t^2(0 \leqslant t \leqslant 1)$ 导出来的. 参数区间 $(\alpha, \beta)$ 的变换常可由参数的线性变换来完成, 这种线性变换具有形式如 $t&#x3D;\alpha \tau+b(a&gt;0)$.</p>
+<p>在逻辑上, 最简单的办法是把两段具有不同方程的弧看成是不同的弧, 而不管其中一个方程是否可以从另一个方程经参数变换来得到. 采用这一办法 (下面我们正是采用这个办法), 证明弧的某些性质在参数变换下保持不变就很重要.例如, 一段弧的起点和终点经参数变换后保持不变.<br>$$</p>
+<h1 id="正常来看美元识别头是正常的"><a href="#正常来看美元识别头是正常的" class="headerlink" title="正常来看美元识别头是正常的"></a>正常来看美元识别头是正常的</h1><p>$$<br>解答. 看扬哥的“以果寻因”法:<br>存在 $c$ 使得 $c A&#x3D;0$ 且 $c b&#x3D;1$<br>$\Longleftrightarrow$ 存在 $c$ 使得 $A^{\prime} c^{\prime}&#x3D;0$ 且 $b^{\prime} c^{\prime}&#x3D;1$<br>$\Longleftrightarrow\left(\begin{array}{c}A^{\prime} \ b^{\prime}\end{array}\right) X&#x3D;\left(\begin{array}{l}0 \ 1\end{array}\right)$ 有解 $X&#x3D;c^{\prime}$.<br>$\Longleftrightarrow r\left(\begin{array}{c}A^{\prime} \ b^{\prime}\end{array}\right)&#x3D;r\left(\begin{array}{cc}A^{\prime} &amp; 0 \ b^{\prime} &amp; 1\end{array}\right)$<br>$\Longleftrightarrow r(A, b)&#x3D;r\left(\begin{array}{ll}A &amp; b \ 0 &amp; 1\end{array}\right)$<br>$\Longleftrightarrow r(A, b)&#x3D;r\left(\begin{array}{ll}A &amp; 0 \ 0 &amp; 1\end{array}\right)&#x3D;r(A)+1$.<br>$\Longleftrightarrow$ 线性方程组 $A X&#x3D;b$ 无解.</p>
+<p>注. 倒数第二个等价关系是因为 $\left(\begin{array}{ll}A &amp; b \ 0 &amp; 1\end{array}\right)$ 可以经过初等行变换化为 $\left(\begin{array}{ll}A &amp; 0 \ 0 &amp; 1\end{array}\right)$, 从而<br>$$<br>r\left(\begin{array}{cc}<br>A &amp; b \<br>0 &amp; 1<br>\end{array}\right)&#x3D;r\left(\begin{array}{cc}<br>A &amp; 0 \<br>0 &amp; 1<br>\end{array}\right)&#x3D;r(A)+1<br>$$<br>$$</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>hiAMigo</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://example.com/2024/02/12/%E6%B5%8B%E8%AF%95/">http://example.com/2024/02/12/%E6%B5%8B%E8%AF%95/</a></span>
+                    </p>
+                
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>如何生而不朽?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2024/02/12/imgTest/">imgTest</a>
+            
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© hiAMigo | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
