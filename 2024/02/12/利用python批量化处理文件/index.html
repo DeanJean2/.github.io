@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="hiAMigo">
+
+
+
+
+
+<title>利用python批量化处理文件 | Hexo</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">hiAMigo&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">hiAMigo&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">利用python批量化处理文件</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">hiAMigo</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">February 12, 2024&nbsp;&nbsp;20:33:08</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Python%E8%84%9A%E6%9C%AC/">Python脚本</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"><span class="keyword">import</span> py7zr</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">move_pdf_files</span>(<span class="params">source_folder, destination_folder</span>):</span><br><span class="line">    <span class="comment"># 确保目标文件夹存在，如果不存在则创建</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(destination_folder):</span><br><span class="line">        os.makedirs(destination_folder)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 获取源文件夹中的所有文件</span></span><br><span class="line">    files = [f <span class="keyword">for</span> f <span class="keyword">in</span> os.listdir(source_folder) <span class="keyword">if</span> os.path.isfile(os.path.join(source_folder, f))]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 遍历每个文件并检查是否为PDF文件，然后移动到目标文件夹</span></span><br><span class="line">    <span class="keyword">for</span> file_name <span class="keyword">in</span> files:</span><br><span class="line">        <span class="keyword">if</span> file_name.lower().endswith(<span class="string">&#x27;.pdf&#x27;</span>):</span><br><span class="line">            source_path = os.path.join(source_folder, file_name)</span><br><span class="line">            destination_path = os.path.join(destination_folder, file_name)</span><br><span class="line"></span><br><span class="line">            <span class="comment"># 使用shutil.move()函数移动文件</span></span><br><span class="line">            shutil.move(source_path, destination_path)</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;移动成功: <span class="subst">&#123;file_name&#125;</span>&quot;</span>)</span><br><span class="line">            </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_full_paths</span>(<span class="params">directory</span>):</span><br><span class="line">    fileschanged = []</span><br><span class="line">    files = os.listdir(directory)</span><br><span class="line">    filesRegex = re.<span class="built_in">compile</span>(<span class="string">r&#x27;\d+-\d+-\d+TE双语【公众号：英语外刊超精读】&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> file <span class="keyword">in</span> files:</span><br><span class="line">        mo = filesRegex.search(file)</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> mo:</span><br><span class="line">            filesRegexChi = re.<span class="built_in">compile</span>(<span class="string">r&#x27;TG (\d&#123;4&#125;-\d&#123;2&#125;-\d&#123;2&#125;)【公众号：英语外刊超精读】&#x27;</span>)</span><br><span class="line">            <span class="keyword">match</span> = filesRegexChi.search(file)</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">match</span>:</span><br><span class="line">                fileschanged.append(<span class="keyword">match</span>.group())</span><br><span class="line"></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            double_str = mo.group() +<span class="string">&#x27;/&#x27;</span>+ mo.group()</span><br><span class="line">            fileschanged.append(double_str)</span><br><span class="line">    full_paths_temp = [os.path.join(directory, file) <span class="keyword">for</span> file <span class="keyword">in</span> fileschanged]</span><br><span class="line">    full_paths = [file.replace(<span class="string">&#x27;\\&#x27;</span>, <span class="string">&#x27;/&#x27;</span>) <span class="keyword">for</span> file <span class="keyword">in</span> full_paths_temp]</span><br><span class="line">    <span class="keyword">return</span> full_paths</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">batch_extract_7zip</span>(<span class="params">source_folder, extract_folder</span>):</span><br><span class="line">    <span class="comment"># 获取源文件夹中的所有文件</span></span><br><span class="line">    files = [f <span class="keyword">for</span> f <span class="keyword">in</span> os.listdir(source_folder) <span class="keyword">if</span> os.path.isfile(os.path.join(source_folder, f))]</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 遍历每个文件并解压缩</span></span><br><span class="line">    <span class="keyword">for</span> file_name <span class="keyword">in</span> files:</span><br><span class="line">        file_path = os.path.join(source_folder, file_name)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 检查文件是否为7zip格式</span></span><br><span class="line">        <span class="keyword">if</span> file_name.endswith(<span class="string">&#x27;.7z&#x27;</span>):</span><br><span class="line">            <span class="keyword">with</span> py7zr.SevenZipFile(file_path, mode=<span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> archive:</span><br><span class="line">                archive.extractall(extract_folder)</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">f&quot;解压缩成功: <span class="subst">&#123;file_name&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;跳过非7zip文件: <span class="subst">&#123;file_name&#125;</span>&quot;</span>)</span><br><span class="line">            </span><br><span class="line"></span><br><span class="line">        </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">delete_files</span>(<span class="params">folder_path_e,folder_path_d</span>):</span><br><span class="line">    <span class="comment"># 获取文件夹中的所有文件</span></span><br><span class="line">    files = os.listdir(folder_path_e)</span><br><span class="line">    files_d = os.listdir(folder_path_d)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 遍历每个文件，判断是否为7z压缩包，然后删除</span></span><br><span class="line">    <span class="keyword">for</span> file_name <span class="keyword">in</span> files:</span><br><span class="line">        file_path = os.path.join(folder_path_e, file_name)</span><br><span class="line">        file_path_ult = file_path.replace(<span class="string">&#x27;\\&#x27;</span>, <span class="string">&#x27;/&#x27;</span>) </span><br><span class="line"></span><br><span class="line">        <span class="comment"># 判断文件是否为7z压缩包</span></span><br><span class="line">        <span class="keyword">if</span> file_path_ult.lower().endswith(<span class="string">&#x27;.7z&#x27;</span>):</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                <span class="comment"># 删除文件</span></span><br><span class="line">                os.remove(file_path_ult)</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">f&quot;已删除压缩包文件: <span class="subst">&#123;file_path_ult&#125;</span>&quot;</span>)</span><br><span class="line">            <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">f&quot;删除压缩包文件时出错: <span class="subst">&#123;file_path_ult&#125;</span>, 错误信息: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> file_name <span class="keyword">in</span> files_d:</span><br><span class="line">        file_path = os.path.join(folder_path_d, file_name)</span><br><span class="line">        file_path_ult = file_path.replace(<span class="string">&#x27;\\&#x27;</span>, <span class="string">&#x27;/&#x27;</span>) </span><br><span class="line">        os.remove(file_path_ult)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;已删除中介文件夹: <span class="subst">&#123;file_path_ult&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 框架</span></span><br><span class="line">source_extract_folder = <span class="string">&#x27;C:/Users/25325/Documents/WeChat Files/wxid_8fjal96qpjk322/FileStorage/File/2024-01&#x27;</span></span><br><span class="line">extract_folder_des = <span class="string">&#x27;C:/Users/25325/Desktop/ipad/test&#x27;</span></span><br><span class="line">source_folder = <span class="string">&#x27;C:/Users/25325/Desktop/ipad/test&#x27;</span></span><br><span class="line">destination_folder = <span class="string">&#x27;C:/Users/25325/Desktop/ipad/testDes&#x27;</span></span><br><span class="line"></span><br><span class="line">batch_extract_7zip(source_extract_folder, extract_folder_des)</span><br><span class="line"></span><br><span class="line">full_paths = get_full_paths(source_folder)</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> full_paths:</span><br><span class="line">    move_pdf_files(item, destination_folder)</span><br><span class="line"></span><br><span class="line">delete_files(source_extract_folder, extract_folder_des)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>hiAMigo</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://deanjean2.github.io/2024/02/12/%E5%88%A9%E7%94%A8python%E6%89%B9%E9%87%8F%E5%8C%96%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6/">http://deanjean2.github.io/2024/02/12/%E5%88%A9%E7%94%A8python%E6%89%B9%E9%87%8F%E5%8C%96%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6/</a></span>
+                    </p>
+                
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>如何生而不朽?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/Python/"># Python</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2024/02/12/imgTest/">imgTest</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© hiAMigo | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
