@@ -127,6 +127,68 @@
                 <div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
 
     
     <article class="post-wrap">
@@ -156,13 +218,18 @@
         </header>
 
         <div class="post-content">
-            <blockquote>
+            <h1 id="内容概括"><a href="#内容概括" class="headerlink" title="内容概括"></a>内容概括</h1><blockquote>
 <p>本期讲，什么人可信，什么人不可信。<br>主要从以下三个角度：</p>
 <p>发内容的这个人是否匿名：看这个人的姓名，性别，年龄，职业等身份信息是否在个人信息里暴露出来，他的其他发言是否能坐实他的信息。</p>
 <p>发布的这个内容是否是独家的：看他发布的内容有没有可能在其他角度进行验证，有引用能够被证明正确的文字&#x2F;资料为他的内容背书的同时他没有断章取义或者歪曲这些资料的本来意思。如果没有，那就当作谣言看待。常见于各种写关于历史的，关于很少人了解到的社会现实的，关于内幕的相关文章，常见开头为：作为圈内人士…</p>
 <p>发布内容的这个背后是否有个集体：能凑齐一拨人，有个团队，说明他们凑在一起是有目的的，是为了要做什么事。那么做什么呢？他们如果是全职的，谁养活他们给他们发工资呢？他们是否透露过自己的资金来源呢？给他们资金的集体的目的又是什么呢</p>
 </blockquote>
 <p>引自<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV11r4y1D7kr/?spm_id_from=333.788.recommend_more_video.-1&vd_source=f5354ba91b36ff85ccb46ea6515f777f">【个人思考】我用哪三个标准来判断信息的可信度</a>下的热门评论</p>
+<h1 id="应用一"><a href="#应用一" class="headerlink" title="应用一"></a>应用一</h1><p>由于我个人认为输出思想之前应当要对自己的言论所负责，我便想要在发表观点之前把有关的社会现实都要有所认识。</p>
+<p>我对待不同立场的言论是这样的态度：我不一定要认同传播者的观点，我只是通过传播者作为信息的媒介进而去把握对应的事件，然后通过事件和话语的比对得到自己的思考和认清各立场的传播者的意识形态。</p>
+<p>这样就牵扯到一个问题，只有对于事件的最初始的记录是“不偏不倚的”（当然，这很难）我们最终才能不知落入有心之人宣传的陷阱，成为别人的一枚棋子</p>
+<p>就这个问题来讲，我们就可以用这种方式判别真伪</p>
+<p>![1 ](.&#x2F;信息的真实性从哪里判断&#x2F;1 .jpeg)</p>
 
         </div>
 
