@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="hiAMigo">
+
+
+
+
+
+<title>从五种基本群说开去 | Hexo</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">hiAMigo&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">hiAMigo&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">从五种基本群说开去</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">hiAMigo</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">February 17, 2024&nbsp;&nbsp;9:11:59</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/">抽象代数</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>注：本文是对微信公众号——隔壁小王的睡前故事的博文《五大家族》的思考和笔记<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/ceGYVz7b4dkaM6OXxPZx1w">五大家族</a></p>
+<h1 id="研究什么样的基本群？"><a href="#研究什么样的基本群？" class="headerlink" title="研究什么样的基本群？"></a>研究什么样的基本群？</h1><p><em>循环群</em>（可用循环图（cycle graph）可视化）会以所谓的轨道（orbit）的形式出现在所有的群中。</p>
+<p>循环群也将帮助我们理解之后遇到的群，如<em>阿贝尔群（Abelian group）和二面体群（Dihedral group）</em>。这些群都可以通过对循环群做“积（product）”运算得到。</p>
+<p><em>对称群（symmetric group）和交错群（alternating group）</em></p>
+<h1 id="解释什么问题？"><a href="#解释什么问题？" class="headerlink" title="解释什么问题？"></a>解释什么问题？</h1><p>五种正多面体（Platonic solid）的对称性以及凯莱定理（Cayley’s Theorem）的一个图解法证明。</p>
+<p>(1) 是否存在两个及两个以上的群，使得它们都具有十个元素？</p>
+<p>(2) 是否存在一个群，其中任意元素（单位元除外）都不是它本身的逆元？</p>
+<p>(3) 所有的群都可以用来描述某些实际对象的对称性吗？</p>
+<h1 id="循环群"><a href="#循环群" class="headerlink" title="循环群"></a>循环群</h1><h2 id="凯莱图"><a href="#凯莱图" class="headerlink" title="凯莱图"></a>凯莱图</h2><p>![0 (1)](.&#x2F;从五种基本群说开去&#x2F;0 (1).jpg)</p>
+<h2 id="群表"><a href="#群表" class="headerlink" title="群表"></a>群表</h2><p><img src="/2024/02/17/%E4%BB%8E%E4%BA%94%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%BE%A4%E8%AF%B4%E5%BC%80%E5%8E%BB/0.jpg" alt="0"></p>
+<p>群表的特点：第n行&#x3D;第n-1行平移下来再向左平移一格</p>
+<h2 id="轨道"><a href="#轨道" class="headerlink" title="轨道"></a>轨道</h2><p><img src="/2024/02/17/%E4%BB%8E%E4%BA%94%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%BE%A4%E8%AF%B4%E5%BC%80%E5%8E%BB/640.png" alt="640"></p>
+<p>考虑S3中的蓝色箭头，它表示的是作用r. 我们从单位元e出发，沿着蓝色的箭头将走出一个圈，这个圈就是C3在S3中的拷贝。我们称之为元素r所在的轨道（orbit）。轨道是一个集合，所以我们常用大括号{…}来表示它；例如此处这个轨道就写作{e,r,,r2}.</p>
+<p>从图中我们可以很清楚地看出元素r和f的轨道：元素r所在的轨道就是外围的那个圈；元素f所在的轨道则只是一个简单的竖着的双向箭头。其他元素所在的轨道也是存在的，不过没这么明显。例如，要找元素fr2所在的轨道，只需从单位元e出发，按照箭头顺序f→r→r走就是了。<em>注意，每次只有当走完一个完整的 f→r→r时，才记录下你所在的节点，中间只是路过的节点不需要记下</em>。这样，我们便找到了元素fr2所在的轨道{e,fr2}. 这样的轨道隐藏得很深，没法一眼看出，但它确实是存在的，也确实是一个轨道。</p>
+<h1 id="交换群的图特征"><a href="#交换群的图特征" class="headerlink" title="交换群的图特征"></a>交换群的图特征</h1><p><img src="/2024/02/17/%E4%BB%8E%E4%BA%94%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%BE%A4%E8%AF%B4%E5%BC%80%E5%8E%BB/640.jpg" alt="640"></p>
+<h1 id="二面体群"><a href="#二面体群" class="headerlink" title="二面体群"></a>二面体群</h1><p>二面体群（dihedralgroup）则可用来描述既有旋转对称又有轴对称（bilateral symmetry）的物体的对称性。</p>
+<p>描述正n边形对称性的二面体群，我们记作Dn</p>
+<p>二面体群Dn中含有2n个元素</p>
+<p>![640 (1)](.&#x2F;从五种基本群说开去&#x2F;640 (1).jpg)</p>
+<h2 id="二面体群的图"><a href="#二面体群的图" class="headerlink" title="二面体群的图"></a>二面体群的图</h2><h3 id="群表-1"><a href="#群表-1" class="headerlink" title="群表"></a>群表</h3><p>凯莱图中处于外圈位置的元素（e至r4）写在了前面，紧接着才写处于内圈位置的元素（f至fr4）。</p>
+<p>![0 (3)](.&#x2F;从五种基本群说开去&#x2F;0 (3).jpg)</p>
+<p><em><strong>蕴含商群的概念</strong></em></p>
+<p>观察到：</p>
+<p>任意一个non-flip乘上一个non-flip，得到的结果是non-flip；</p>
+<p>任意一个non-flip乘上一个flip，得到的结果是flip；</p>
+<p>任意一个flip乘上一个non-flip，得到的结果是flip；</p>
+<p>任意一个flip乘上一个flip，得到的结果是non-flip.</p>
+<p>![640 (2)](.&#x2F;从五种基本群说开去&#x2F;640 (2).jpg)</p>
+<p>依照这种方式“缩小”一个群，我们称为对群“作商（taking a quotient）”。</p>
+<h3 id="循环图（二面体群从结构上来看已经非常接近交换群）"><a href="#循环图（二面体群从结构上来看已经非常接近交换群）" class="headerlink" title="循环图（二面体群从结构上来看已经非常接近交换群）"></a>循环图（二面体群从结构上来看已经非常接近交换群）</h3><p><em>Dn中元素r所在的轨道包含n个元素，其它的n个元素，每一个都位于自己的那个只含两个元素的小轨道上。</em></p>
+<p>![640 (3)](.&#x2F;从五种基本群说开去&#x2F;640 (3).jpg)</p>
+<p>论述：对于Dn中任意一个不在轨道r（即元素r所在的轨道）中元素都可以写成frm的形式</p>
+<p>操作frf的效果和r-1是相同的。（因为这个情境让我们意识到将r两边用f“包围”（即frf&#x3D;r-1），其实就是将角色的视角进行了切换）</p>
+<h1 id="对称群与交错群"><a href="#对称群与交错群" class="headerlink" title="对称群与交错群"></a>对称群与交错群</h1><p><em><strong>置换是一种足够强有力的工具，利用这一工具我们能构建出任意一个群</strong></em></p>
+<p>Sn就表示由n个东西的所有置换所构成的群。</p>
+<p>：<em>群Sn的阶为n!</em></p>
+<p>![640 (4)](.&#x2F;从五种基本群说开去.&#x2F;640 (4).jpg)</p>
+<p><em><strong>把n个东西的全体置换放在一起构成一个群往往只要取Sn中的某些置换就足以构作出一个群。将Sn中所有的元素都平方一下，那么平方后得到的元素就会刚刚好是Sn的二分之一，这样挑选出的元素构成的就是交错群</strong></em></p>
+<p>![640 (5)](.&#x2F;从五种基本群说开去&#x2F;640 (5).jpg)</p>
+<p>观察到：基本变换（12，13，23）的平方是e</p>
+<p><em><strong>一个对称性群如果可以同时描述两个体，则它的凯莱图可以表示成两种形式（WHY）</strong></em></p>
+<p>![640 (6)](.&#x2F;从五种基本群说开去&#x2F;640 (6).jpg)</p>
+<p>![640 (7)](.&#x2F;从五种基本群说开去&#x2F;640 (7).jpg)</p>
+<h1 id="凯莱定理"><a href="#凯莱定理" class="headerlink" title="凯莱定理"></a>凯莱定理</h1><h2 id="从图中找出置换的方法"><a href="#从图中找出置换的方法" class="headerlink" title="从图中找出置换的方法"></a>从图中找出置换的方法</h2><p>![0 (4)](.&#x2F;从五种基本群说开去&#x2F;0 (4).jpg)</p>
+<p>![640 (8)](.&#x2F;从五种基本群说开去&#x2F;640 (8).jpg)</p>
+<p>把每一列看成一种置换</p>
+<h2 id="凯莱定理-1"><a href="#凯莱定理-1" class="headerlink" title="凯莱定理"></a>凯莱定理</h2><p>定理5.1（凯莱定理）   任意一个有限群都同构于某一个置换群</p>
+<p>证明：</p>
+<p>思路：**<u>对群中的每个元素通过一定方法找到对应的置换，组成新表，只要证明新表和群表一样</u>**</p>
+<p>假设已经给定了一个有限群，让我们给这个群的每一个元素重新用数字1到n进行标识，并让1表示单位元。我们也需要给从群的乘法表中得到的置换以一些简便的记号表示，不妨设乘法表第1列表示的置换为P1，第2列表示的置换为P2，以此类推。我们用P1，P2，…Pn再构作一张乘法表，将这张新的表与原来群的乘法表相比较。</p>
+<p>设想我们现在考察新的乘法表中的Pi行与Pj列相交出来的格子，假设这个格子的结果为Pk，即Pi·Pj&#x3D;Pk，下面我将证明这些置换以及它们之间的关系“忠实地（faithfully）”反映了原来的群元素及其关系。也就是说在原来的乘法表中必有i·j&#x3D;k成立。<em><strong>（同构）</strong></em></p>
+<p>考虑这些置换对于原来群的单位元1的作用效果。因为Pk在原群中意味着“右乘k”，将Pk作用到1上就表示将1右乘k，即Pk(1)&#x3D;1·k&#x3D;k. 同理，将置换Pi·Pj作用到1上就表示先用1右乘i，再右乘j，即  </p>
+<p>   Pi·Pj(1)&#x3D;1·i·j&#x3D; i·j</p>
+<p>因为 Pi·Pj&#x3D;Pk，所以Pk(1)和Pi·Pj(1)的作用结果必然是相同的，而前者的结果是k，后者的结果是i·j，这就表明i·j&#x3D;k. </p>
+<p>由i,j,k的任意性，我们便知道，任何来自于置换的乘法表中的Pi·Pj&#x3D;Pk，都只是相应的原群乘法表中的i·j&#x3D;k的复制版本而已。因此，这个置换群的结构模式与原来给定的群是完全一样的，即证得定理之所述。</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>hiAMigo</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://deanjean2.github.io/2024/02/17/%E4%BB%8E%E4%BA%94%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%BE%A4%E8%AF%B4%E5%BC%80%E5%8E%BB/">http://deanjean2.github.io/2024/02/17/%E4%BB%8E%E4%BA%94%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%BE%A4%E8%AF%B4%E5%BC%80%E5%8E%BB/</a></span>
+                    </p>
+                
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>如何生而不朽?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/%E6%95%B0%E5%AD%A6/"># 数学</a>
+                    
+                        <a href="/tags/%E4%BB%A3%E6%95%B0/"># 代数</a>
+                    
+                        <a href="/tags/%E7%BE%A4%E8%AE%BA/"># 群论</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2024/02/16/%E2%80%9C%E4%BB%80%E4%B9%88%E6%98%AF%E7%BE%A4%EF%BC%9F%E2%80%9D%E6%9C%89%E6%84%9F/">“什么是群？”有感</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© hiAMigo | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
