@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="hiAMigo">
+
+
+
+
+
+<title>从子群说开来 | Hexo</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">hiAMigo&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">hiAMigo&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">从子群说开来</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">hiAMigo</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">February 18, 2024&nbsp;&nbsp;10:08:39</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/">抽象代数</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p><strong>我们可以给群挑选合适的生成元，那么借由这些生成元就可以找到群中的子群并将其可视化展现出来</strong></p>
+<h1 id="凯莱图的正则性"><a href="#凯莱图的正则性" class="headerlink" title="凯莱图的正则性"></a>凯莱图的正则性</h1><p>即由于代数等式有恒成立性，则相似的结构在凯莱图里总是处处出现</p>
+<h1 id="陪集"><a href="#陪集" class="headerlink" title="陪集"></a>陪集</h1><p><em>在群的凯莱图中，我们会看到与一些基本的群相似的结构，如果这个结构成群，则成为子群</em></p>
+<p><em>如果不成群，只是结构相同，我们说它是子群的陪集</em> <strong>以表明它们仅仅只是在结构上拷贝了某一个子群（copies of a subgroup structurally），但是本身却不是群</strong>。</p>
+<p>（思考S3）</p>
+<h2 id="子群和陪集牵涉出群的重要结构特征"><a href="#子群和陪集牵涉出群的重要结构特征" class="headerlink" title="子群和陪集牵涉出群的重要结构特征"></a>子群和陪集牵涉出群的重要结构特征</h2><p>观察6.3：每一个子群都有陪集，子群与其陪集彼此不相交的覆盖该群的凯莱图。</p>
+<p>从单位元开始生成会得到子群，同样的，我们可以从群中的任何元素开始生成，最终生成物与子群有相同的结构，而且群中的每个元素都被包含进去了，因此是对该群的一个覆盖</p>
+<p>观察6.4：我们可以用代数的方法描述陪集。以节点a拷贝H得到的陪集有一个“代数的名字”：aH.</p>
+<p><em>aH也就有类似的含义：每次都从节点a出发，遍历H中的所有路径所到达的节点的集合</em>。这就给出了以节点a拷贝H得到的陪集</p>
+<p>观察6.5：每一个陪集的名字并不唯一。</p>
+<p>如果有几个节点是在一个“圈”中，它们都可以生成该陪集。代数语言在下面</p>
+<p>观察6.6：若b∈aH，则aH&#x3D;bH.</p>
+<h3 id="计算右陪集"><a href="#计算右陪集" class="headerlink" title="计算右陪集"></a>计算右陪集</h3><p><em>为了能形象的计算一个右陪集，我们只需要将处理左陪集时的方法反过来：每次从<f>中挑一个节点出发，都走路径r，当出发点遍历<f>中所有节点后，所到达的节点集合就是右陪集<f>r.</f></f></f></em> </p>
+<p>右陪集元素分布散是因为把图中路径定义为了右乘</p>
+<p><img src="/2024/02/18/%E4%BB%8E%E5%AD%90%E7%BE%A4%E8%AF%B4%E5%BC%80%E6%9D%A5/640(1).jpg" alt="640(1)"></p>
+<h3 id="左右陪集相等？正规子群！"><a href="#左右陪集相等？正规子群！" class="headerlink" title="左右陪集相等？正规子群！"></a>左右陪集相等？正规子群！</h3><p>图6.9使用子群H&#x3D;&lt;(0,1)&gt; <strong>&lt;</strong> C3×C3展示了当左陪集与右陪集相同时的状况。尽管这张图只描述了，对于g&#x3D;(1,0)，有gH&#x3D;Hg成立。然而实际上，gH&#x3D;Hg对于任意的g∈C3×C3均是成立的，具有这种性质的子群H由于其重要性，我们赋予其另外的特别称号“正规子群（normal subgroup）</p>
+<p><img src="/2024/02/18/%E4%BB%8E%E5%AD%90%E7%BE%A4%E8%AF%B4%E5%BC%80%E6%9D%A5/640.jpg" alt="640"></p>
+<h1 id="拉格朗日定理"><a href="#拉格朗日定理" class="headerlink" title="拉格朗日定理"></a>拉格朗日定理</h1><p>定理6.7: 若H是群G的子群，则G中每个元素属于H的某一个唯一确定的左陪集。</p>
+<p><img src="/2024/02/18/%E4%BB%8E%E5%AD%90%E7%BE%A4%E8%AF%B4%E5%BC%80%E6%9D%A5/6402.jpg" alt="6402"></p>
+<p>定理6.8（拉格朗日定理）: 若H **&lt;**G，则｜H｜整除｜G｜.</p>
+<p>定义6.9（指标） 若H**&lt;**G，定义子群H在G中的指标（index）为[G:H]，其中[G:H]是群阶数与子群阶数的商</p>
+<p><em><strong>举个例子，对于一个8阶群，你根本不必费神去寻找它的3阶、5阶、6阶或7阶子群，因为这些数都不整除8. 更一般地，对于任意一个有限群G，你都不需要去费神寻找｜H｜&gt;｜G｜&#x2F;2的子群H，这是因为比｜G｜的二分之一大的数都不能整除｜G｜（当然，唯一的例外只有非真子群H&#x3D;G）。</strong></em></p>
+<blockquote>
+<p>“逆命题”是说，是否对于任意n整除｜G｜，我们都能够找到一个n阶子群H**&lt;**G？答案是否定的。但是，如果给逆命题进行适当的调整，得到的命题则可能不仅是正确的，而且会非常有用。在这些“不完全的”逆命题中，最著名的是三条西罗定理（Sylow Theorems）</p>
+</blockquote>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>hiAMigo</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://deanjean2.github.io/2024/02/18/%E4%BB%8E%E5%AD%90%E7%BE%A4%E8%AF%B4%E5%BC%80%E6%9D%A5/">http://deanjean2.github.io/2024/02/18/%E4%BB%8E%E5%AD%90%E7%BE%A4%E8%AF%B4%E5%BC%80%E6%9D%A5/</a></span>
+                    </p>
+                
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>如何生而不朽?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/%E6%95%B0%E5%AD%A6/"># 数学</a>
+                    
+                        <a href="/tags/%E4%BB%A3%E6%95%B0/"># 代数</a>
+                    
+                        <a href="/tags/%E7%BE%A4%E8%AE%BA/"># 群论</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2024/02/17/%E4%BB%8E%E4%BA%94%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%BE%A4%E8%AF%B4%E5%BC%80%E5%8E%BB/">从五种基本群说开去</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© hiAMigo | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
