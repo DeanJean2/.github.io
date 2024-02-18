@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="hiAMigo">
+
+
+
+
+
+<title>积与商 | Hexo</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">hiAMigo&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">hiAMigo&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">积与商</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">hiAMigo</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">February 18, 2024&nbsp;&nbsp;11:05:09</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/">抽象代数</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>本章则往与之相反的方向前进，将展示如何把不同的群集聚在一起来构建更大的群。</p>
+<p>某种特定的子群将成为上述运算之逆运算的关键，即所谓的“商运算”</p>
+<p>实施一个商运算将解构任何一种积，这可以揭示出一个大群是如何由小群构建出来的。</p>
+<p>这使得我们有能力清晰而简洁地图示出很多大群（large groups），并将许多原本极为巨大而复杂的对象纳入我们智力所能企及的范围之内。</p>
+<h1 id="直积"><a href="#直积" class="headerlink" title="直积"></a>直积</h1><p>定义7.1（由凯莱图构建直积的技术）使用凯莱图A与B来构造直积A×B，其构建步骤如下：</p>
+<ol>
+<li>画出A的凯莱图。在图7.2的示例中，A&#x3D;C2，即其中最左边的图。</li>
+<li>“吹胀”A中的所有节点，并于每一个“吹胀了的”节点中放置一个B的凯莱图。</li>
+<li>把A中节点被“吹胀”的外轮廓擦去，同时使用A中的箭头去连接各个B凯莱图中彼此相关的节点；在完成四对节点的连接工作后，我们就得到了C2×C4的凯莱图。</li>
+</ol>
+<p><img src="/2024/02/18/%E7%A7%AF%E4%B8%8E%E5%95%86/0.jpg" alt="0"></p>
+<p>然而我们也可以换一个顺序作这个积，得到相同的结果。我们可以证明，对于任意的群A与群B，A×B总是与B×A有着完全相同的结构。因此，我们称在同构意义下，直积运算可交换（commutative）</p>
+<p>命名</p>
+<p><img src="/2024/02/18/%E7%A7%AF%E4%B8%8E%E5%95%86/640(1).jpg" alt="640(1)"></p>
+<p>发现C2是正规子群</p>
+<p>定义7.2（正规子群）：一个子群H &lt; G是正规的（normal），如果H的每一个左陪集同时也是一个右陪集（反之亦是）。我们用H◁G来表示H是G的正规子群。</p>
+<p><strong>在任意一个直积中，它的因子都是正规子群</strong></p>
+<h2 id="为什么需要直积？-可以更好的描述高阶群"><a href="#为什么需要直积？-可以更好的描述高阶群" class="headerlink" title="为什么需要直积？(可以更好的描述高阶群)"></a>为什么需要直积？(可以更好的描述高阶群)</h2><p>观察到，在A×B的凯莱图中，沿着A中的箭头既不会影响B，也不会被B影响。</p>
+<p>绿色箭头（C4）只影响每一个节点名字的第一个分量。</p>
+<p><img src="/2024/02/18/%E7%A7%AF%E4%B8%8E%E5%95%86/0.png" alt="0"></p>
+<p>沿着一个竖直箭头（C2）会改变节点所在的行，或者说节点名字的第二个分量</p>
+<p><img src="/2024/02/18/%E7%A7%AF%E4%B8%8E%E5%95%86/0(1).png" alt="0(1)"></p>
+<p>在一定意义上，直积的两个因子之间存在着某种“独立性”</p>
+<p>下面的例子就是不相互独立：</p>
+<p>竖直的运动有可能改变水平的位置，因此水平运动与竖直运动并不独立。</p>
+<p><img src="/2024/02/18/%E7%A7%AF%E4%B8%8E%E5%95%86/640.jpg" alt="640"></p>
+<blockquote>
+<p>将直积视为两个“独立的”粘在一起的群，其中之一个好处是一些高阶的群将能简洁地被可视化。举个例子，我们用不着去画一个有56个元素的群D4×C7的凯莱图——要是真这么画出来，那会相当的杂乱繁复；我们只需分别画出D4的凯莱图和C7的凯莱图，再用一根线连着它们，以表示在做“同时且独立地导航”。</p>
+</blockquote>
+<p><img src="/2024/02/18/%E7%A7%AF%E4%B8%8E%E5%95%86/6403.jpg" alt="6403"></p>
+<h2 id="从代数的角度来看"><a href="#从代数的角度来看" class="headerlink" title="从代数的角度来看"></a>从代数的角度来看</h2><p>上面的讨论是基于作用的，他用凯莱图表示</p>
+<p>定义7.3 （由乘法表构建直积的技术）取A&#x3D;C4，B&#x3D;C2作为示例</p>
+<ol>
+<li>画出A的乘法表。在图7.12的示例中，C4的乘法表由蓝色的元素表示。</li>
+<li>A中的所有格子中放置一个B的乘法表。为了避免原来的表A中的信息丢失，将A中的元素名仍然保留，并悬浮在相应位置处。在图7.12中间那张图中</li>
+<li>将所得新表中的元素以有序对的形式重新命名，将A中的元素作为名字的左分量，B中的元素作为名字的右分量。</li>
+</ol>
+<p><img src="/2024/02/18/%E7%A7%AF%E4%B8%8E%E5%95%86/0(1).jpg" alt="0(1)"></p>
+<p>为了在C4×C2中计算（2，1）·（3，1），我们只需知道如何在C4中计算2+3以及如何在C2中计算1+1即可；<strong>每个分量在进行各自的运算时，相互独立，互不干扰。</strong></p>
+<h1 id="半直积"><a href="#半直积" class="headerlink" title="半直积"></a>半直积</h1><p>也有两个因子，一个因子用来“拷贝”，另一个用来决定连接方式。不同之处在于，半直积中所做的“拷贝”并非通常意义上的”完全一模一样的复制”，我们允许拷贝时发生一些“扭折(twisting)”，由此产生更多可能的复杂情形。</p>
+<p>定义7.4 （rewiring）. 我们称一张凯莱图是另一张的rewiring，如果满足以下所有条件：</p>
+<p>（a）   两张凯莱图有完全相同的节点位置</p>
+<p>（b）   两张凯莱图的箭头布置可以不相同</p>
+<p>（c）   两张凯莱图中的群元素之间的代数关系必须保持一致</p>
+<p><img src="/2024/02/18/%E7%A7%AF%E4%B8%8E%E5%95%86/01(1).jpg" alt="01(1)"></p>
+<p>左图中成立a·a&#x3D;a2，这是因为从单位元节点出发走两条红箭头a将到达节点a2. 所以我们必须去验证在右图里，此等式关系仍然成立。<strong>它确实是成立的</strong></p>
+<p><strong>为了彻底地验证所有等式，我们可以将每一张凯莱图各自转化为相应的乘法表，你会发现所得到的两张乘法表是一样的（同构意义下）</strong></p>
+<p>我们用置换来描述rewirings；事实上，正如你所怀疑的那样，我们可以将所有的rewirings放在一起形成一个群。</p>
+<p><img src="/2024/02/18/%E7%A7%AF%E4%B8%8E%E5%95%86/64.jpg" alt="64"></p>
+<p><strong>图7.18这样的图让我们想起了直积群的构造过程。</strong>因为这两张图也是把凯莱图当作节点，然后连接起来；这就跟定义7.1的步骤2十分相似了。不同之处在于，对于直积，我们在凯莱图的节点里拷贝了一模一样的另外一个群；而此处，我们在节点里放置的群却是彼此各不相同，因为它们的布线方式不同</p>
+<p>如果进一步，图7.18再按照直积构造过程定义7.1的步骤3连接各个相应节点，就得到了所谓的半直积群（semidirect product group）。我们将得到的结果称为C3与C2的半直积，因为其中的小群是C3的两个rewirings，而整体的结构却是遵循C2的结构。</p>
+<p><img src="/2024/02/18/%E7%A7%AF%E4%B8%8E%E5%95%86/64(1).jpg" alt="64(1)"></p>
+<h1 id="正规子群和商运算"><a href="#正规子群和商运算" class="headerlink" title="正规子群和商运算"></a>正规子群和商运算</h1><p><em><strong>当看见一个群时，如何才能将其重新审视为一个关于直积的凯莱图呢？也就是说，倘若一张凯莱图并非是你自己亲手用直积或半直积过程构建出来的，那你怎么辨识出它究竟是不是直积或半直积？是的话，你又怎么知道A和B具体是什么呢？</strong></em></p>
+<p><em><strong>商运算甚至还可以用来重新组织那些并非由直积或半直积构建出来的群的结构，而且由此揭示的结构常常有助于我们进一步理解这些本身非直积也非半直积的群。</strong></em></p>
+<p>定义7.5（商运算）为了用G的某个子群H来商掉G，请遵循以下步骤：</p>
+<ol>
+<li><p>将群G的凯莱图用H进行重组（如我们第一次在6.3节中所做的那样）</p>
+<p>图7.20最上方的图展示的示例是G&#x3D;C6，H&#x3D;&lt;2&gt;.注意到，G中H的陪集已经被  我按行组织好了，这是为了给下面的步骤做准备。</p>
+</li>
+<li><p>将H的每一个陪集缩并为一个节点，并将此时有着相同出发点与终点的箭头合并。这一步形成一个新的凯莱图，其中的节点数与箭头数都大大减少了。图7.20的中间与下方的图展示了这一步的操作。</p>
+</li>
+<li><p>如果新得到的凯莱图是一个群，那么你就已经获得了H商掉G后的商群，且这个新得到的凯莱图便是此商群的凯莱图；否则的话，则表明G不能用所选取的H作商运算。图7.20的最下方那张图表示的是C2，符合群的凯莱图的要求，也因此C3商掉C6得到C2.</p>
+</li>
+</ol>
+<p><img src="/2024/02/18/%E7%A7%AF%E4%B8%8E%E5%95%86/6(1).jpg" alt="6(1)"></p>
+<p>商群中的元素都是原来的那个子群H的陪集</p>
+<p>左因子A就是我们在施行定义7.5中的第1步时所用的那个子群H，而右因子B则是在做商运算后所得的结果表示的那个群。</p>
+<h2 id="例一-S3"><a href="#例一-S3" class="headerlink" title="例一 S3"></a>例一 S3</h2><p>“商”这一运算的特点与精髓正在与此：<strong>它是一种从“较为宏观”的大视角来审视原来的群的手段，而不去在意细枝末节上的差异，更关注于整体的结构。</strong>（C6和S3作商后一样）</p>
+<p><img src="/2024/02/18/%E7%A7%AF%E4%B8%8E%E5%95%86/6(2).jpg" alt="6(2)"></p>
+<p>S3虽然做不了直积，但它确实一个货真价实的半直积，即S3是C3与C2的一个半直积。</p>
+<h2 id="例二-A4"><a href="#例二-A4" class="headerlink" title="例二 A4"></a>例二 A4</h2><p>一个富有启发性的更大一点的例子是群A4</p>
+<p><img src="/2024/02/18/%E7%A7%AF%E4%B8%8E%E5%95%86/2.jpg" alt="2"></p>
+<p>以这种方式，A4 不是V4xC3，但有可能是半直积</p>
+<p>如果把陪集rewirings一下</p>
+<p><img src="/2024/02/18/%E7%A7%AF%E4%B8%8E%E5%95%86/3.jpg" alt="3"></p>
+<p>就变成下图的外圈了</p>
+<p><img src="/2024/02/18/%E7%A7%AF%E4%B8%8E%E5%95%86/4.jpg" alt="4"></p>
+<p><strong>接着说，A4&#x2F;V4 &#x3D; C3并不意味着A4商去一个C3是有结果的</strong></p>
+<p><img src="/2024/02/18/%E7%A7%AF%E4%B8%8E%E5%95%86/5.jpg" alt="5"></p>
+<p>上图不成群，根本原因在于一个节点有多个路径与之相连，就会导致一种歧义性</p>
+<p><strong>我们自然会问出一个问题——子群满足什么条件商才能成群？</strong>正规子群</p>
+<p><em><strong>如果存在一根从H中射出的g箭头指向了H的某个左陪集gH ，那么从H中射出的其他所有g箭头都会一致地指向此左陪集。（因为Hg&#x3D;gH）</strong></em></p>
+<p><strong>说的更详细点，即从H中的任意一个节点出发，沿着箭头g走到的终点恰好就是左陪集gH中的节点；</strong></p>
+<p>**再换句话说，即所有从H射出的g箭头都全体一致地指向了gH. **</p>
+<p><strong>注意到g∈G还得是任意的，不同的g反映在图中就是不同颜色的箭头，因此，一个子群是正规子群当且仅当从H中射出的任意一种颜色的箭头都具有一致的朝向。</strong></p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>hiAMigo</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://deanjean2.github.io/2024/02/18/%E7%A7%AF%E4%B8%8E%E5%95%86/">http://deanjean2.github.io/2024/02/18/%E7%A7%AF%E4%B8%8E%E5%95%86/</a></span>
+                    </p>
+                
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>如何生而不朽?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/%E6%95%B0%E5%AD%A6/"># 数学</a>
+                    
+                        <a href="/tags/%E4%BB%A3%E6%95%B0/"># 代数</a>
+                    
+                        <a href="/tags/%E7%BE%A4%E8%AE%BA/"># 群论</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2024/02/18/%E4%BB%8E%E5%AD%90%E7%BE%A4%E8%AF%B4%E5%BC%80%E6%9D%A5/">从子群说开来</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© hiAMigo | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
