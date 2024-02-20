@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="hiAMigo">
+
+
+
+
+
+<title>《享受你的症状》感（1） | Hexo</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">hiAMigo&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">hiAMigo&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">《享受你的症状》感（1）</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">hiAMigo</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">February 20, 2024&nbsp;&nbsp;18:57:02</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E3%80%8A%E4%BA%AB%E5%8F%97%E4%BD%A0%E7%9A%84%E7%97%87%E7%8A%B6%E3%80%8B%E6%84%9F/">《享受你的症状》感</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p><img src="/2024/02/20/%E3%80%8A%E4%BA%AB%E5%8F%97%E4%BD%A0%E7%9A%84%E7%97%87%E7%8A%B6%E3%80%8B%E6%84%9F%EF%BC%881%EF%BC%89/1.jpg" alt="1"></p>
+<h1 id="什么是启蒙？"><a href="#什么是启蒙？" class="headerlink" title="什么是启蒙？"></a>什么是启蒙？</h1><p>导言部分我最有印象的就是讨论一个问题：“到底什么是启蒙？”</p>
+<p>我认为这是一个很大的问题，因为这牵扯到“人如何能够得到一个好的理论，一个好的社会图景，一个好的生活方式”，另一个方面，这个问题还关系到人怎么从已经习惯了的生活中走出来这一个重大命题</p>
+<p>康德的想法是“辩论的时候无论说什么都可以，但是一旦有了定论，就必须遵循”</p>
+<p>其实自律就是这样的一种模式，你必须遵守你自己给你下达的命令，进一步我们可以说，自由在康德看来就是保留威权的形式，与威权唯一的区别就是发令者变成了自己。</p>
+<p>与之相反的对自由的理解就是自由就是无拘无束的玩乐，在康德看来这种行为不过是把自身行为的主动权和对自身的控制权让渡出去了，使得自己暂时的成为了“无政府状态”</p>
+<p>我要遵循这个原则，因为这可以使得我更好，嚷我摆脱目前混混噩噩的生活，那么我也要时时刻刻想着这一点，并且遵守。但是这并不意味着一定要病态的战战兢兢，我们是可以选择的，可以选择放弃，这个介绍的环节不过是可以让我们好好地思考一下一件事本身，让我们重新找回生活的严肃性，让我们重新做一个人！</p>
+<p>与这种姿态相对的是一种犬儒主义的距离感</p>
+<h1 id="《城市之光》的最后一幕"><a href="#《城市之光》的最后一幕" class="headerlink" title="《城市之光》的最后一幕"></a>《城市之光》的最后一幕</h1><p>你眼中的某个人可能不是本真的那个人，而只是你的幻想的占位符</p>
+<p>一封信总是到达目的地，它不可能不到达目的地，因为只要它停了那么就没有到达目的地</p>
+<p>谁来都行，只不过你来了。你觉得神圣的命运指引你，只是因为别人在这个符号上灌注了很多</p>
+<p>这也就是为什么历史没有假如，也就是拉康说的“能指的任意性”</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>hiAMigo</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://deanjean2.github.io/2024/02/20/%E3%80%8A%E4%BA%AB%E5%8F%97%E4%BD%A0%E7%9A%84%E7%97%87%E7%8A%B6%E3%80%8B%E6%84%9F%EF%BC%881%EF%BC%89/">http://deanjean2.github.io/2024/02/20/%E3%80%8A%E4%BA%AB%E5%8F%97%E4%BD%A0%E7%9A%84%E7%97%87%E7%8A%B6%E3%80%8B%E6%84%9F%EF%BC%881%EF%BC%89/</a></span>
+                    </p>
+                
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>如何生而不朽?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"># 读后感</a>
+                    
+                        <a href="/tags/%E7%94%9F%E6%B4%BB%E6%8C%87%E5%AF%BC/"># 生活指导</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2024/02/18/%E7%A7%AF%E4%B8%8E%E5%95%86/">积与商</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© hiAMigo | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
