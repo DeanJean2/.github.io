@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="hiAMigo">
+
+
+
+
+
+<title>《享受你的症状》感（5） | Hexo</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">hiAMigo&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">hiAMigo&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">《享受你的症状》感（5）</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">hiAMigo</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">March 11, 2024&nbsp;&nbsp;14:02:34</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E3%80%8A%E4%BA%AB%E5%8F%97%E4%BD%A0%E7%9A%84%E7%97%87%E7%8A%B6%E3%80%8B%E6%84%9F/">《享受你的症状》感</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p><img src="/2024/03/11/%E3%80%8A%E4%BA%AB%E5%8F%97%E4%BD%A0%E7%9A%84%E7%97%87%E7%8A%B6%E3%80%8B%E6%84%9F%EF%BC%885%EF%BC%89/1.png" alt="1"></p>
+<p>本文于第三周写成</p>
+<h1 id="绝对否定性和“世界之夜”"><a href="#绝对否定性和“世界之夜”" class="headerlink" title="绝对否定性和“世界之夜”"></a>绝对否定性和“世界之夜”</h1><blockquote>
+<p>所以.精神分析把“现实”当作某种由主体所建构、所“假定’的东西.恰恰是在“现实”一词的德国唯心主义的意义上。罗西里尼电影标题中的“零年”就是穿越零点的“黑暗进程”，是“（被建构之）现实的暗蚀”，是主体向着自身的回撤，是“世界之夜”，是作为“抽象否定性”的纯粹自我的经验。</p>
+</blockquote>
+<p>在这个意义上，现实，反思性地讲，是被主体构建出来的。构建的工具是拉康所说的象征秩序，而象征秩序本身又是从“世界之夜”的空洞的虚无所产生的。</p>
+<p>象征秩序，是被认为是一种有命名权的语言而存在的，象征秩序赋予事物以名字（能指），使得其可以被知性所把握，而这样的把握的过程是有缺失的，我们的知性是有限的，知性在把握事物的同时斩断了对象与其他事物的关联，进而使得我们无法把握到这些关联所蕴含的内容</p>
+<p>我们谈论颜色、形式、形状等等,仿佛它们拥有自足的存在。知性的力量就体现为这样的能力，它把经验的有机整体还原为“僵死”的符号分类的一个附录。</p>
+<blockquote>
+<p>人就是这个夜，这个空洞的虚无，它在它的简单性当中包含了一切 份无尽的财富，拥有诸多的表象和图像，虽然还没有一个对它直接地显现，或者到场。这个夜，本性的内部，在这——纯粹的自我——在幽灵似的表象当中存在，它是无处不在的夜：这儿闪出一个血淋淋的头颅，那儿跳出一个白色的幻影，就这样消失了。当我们注视着一个人的眼睛，我们就看见这个夜.一个变得可怕的夜……</p>
+</blockquote>
+<p>黑格尔对这些东西充满了惊奇：他惊奇于知性的这一抑制能力让它面前的活生生的实体变得绝对的无助，他惊奇于这种极大的力量把“自然”地属于一体的东西分开并因此能够让生命进程的现实服从符号的“虚构”;在他看来，虚构征服现实的这一颠倒毋宁证明了<strong>我们所谓的“现实”的固有的存在论空无</strong></p>
+<p>爱国的本质是实际的与国家相关的活动的总和，还是这些爱国活动通过对于虚幻的爱国符号的指涉而获得一致性而被结构起来？这是一个值得深思的问题</p>
+<p>其实前者是不成立的，因为如果爱国的符号或者是说爱国的内涵是被一些行为所构建起来的话，那么主体在行动之前一定是不知道爱国符号内涵为何物的，那么我们就要考虑主体为什么要产生这种行为也就是问主体的动力来自于何处，无非是两种可能：现实的或是其他精神性的东西的推动，可以知道这两者解释起来都是不自然的。</p>
+<p>黑格尔的“绝对否定性”和康德的将物自体和经验分开的深渊本质是一回事。康德将物自体和经验的界限看作是人类不可测的深渊，而黑格尔却认为物自体和经验在被我们把握的时候便是一体的，而这个界限只不过是起到一个分离的力量</p>
+<h1 id="语言与现实"><a href="#语言与现实" class="headerlink" title="语言与现实"></a>语言与现实</h1><blockquote>
+<p>空谈足矣，是时候从行动转向言词了！ 也就是说.一切活动都处在某个意义的视域当中，意义的视域本身足以让活动变得可能;所以,通过“说正确的话”，把断裂引入这个符号的背景，一个人就无法继续像之前一样行动了。</p>
+</blockquote>
+<p>只有当言词尚未获得逻各斯的特征，尚未抵达符号必然性的世界时，通过在最暴力、最偶然的“生成”中经验言词，我们才有效地“克服”了这道把言词和行动分开的深渊</p>
+<h1 id="爱与被爱者的关系"><a href="#爱与被爱者的关系" class="headerlink" title="爱与被爱者的关系"></a>爱与被爱者的关系</h1><p>爱者Cerastes)在被爱者(eromenos)身上寻找他所缺乏的东西</p>
+<p>被爱的对象通过让自己承担爱者的位置，通过把自己的手伸向爱者并因此用他自身的匮乏回应爱者的匮乏&#x2F;欲望，来努力地将他自己从其位置的僵局，从遵照爱者之要求的不可能性当中释放出来</p>
+<p>爱人者应当通过被爱者完成一种自反的重构</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>hiAMigo</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://deanjean2.github.io/2024/03/11/%E3%80%8A%E4%BA%AB%E5%8F%97%E4%BD%A0%E7%9A%84%E7%97%87%E7%8A%B6%E3%80%8B%E6%84%9F%EF%BC%885%EF%BC%89/">http://deanjean2.github.io/2024/03/11/%E3%80%8A%E4%BA%AB%E5%8F%97%E4%BD%A0%E7%9A%84%E7%97%87%E7%8A%B6%E3%80%8B%E6%84%9F%EF%BC%885%EF%BC%89/</a></span>
+                    </p>
+                
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>如何生而不朽?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"># 读后感</a>
+                    
+                        <a href="/tags/%E7%94%9F%E6%B4%BB%E6%8C%87%E5%AF%BC/"># 生活指导</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2024/03/06/%E3%80%8A%E4%BA%AB%E5%8F%97%E4%BD%A0%E7%9A%84%E7%97%87%E7%8A%B6%E3%80%8B%E6%84%9F%EF%BC%884%EF%BC%89/">《享受你的症状》感（4）</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© hiAMigo | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
