@@ -127,6 +127,68 @@
                 <div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
 
     
     <article class="post-wrap">
@@ -158,7 +220,7 @@
         <div class="post-content">
             <p><img src="/2024/03/21/%E3%80%8A%E4%BA%AB%E5%8F%97%E4%BD%A0%E7%9A%84%E7%97%87%E7%8A%B6%E3%80%8B%E6%84%9F%EF%BC%886%EF%BC%89/1.jpg" alt="1"></p>
 <p>本文于第四周写成</p>
-<blockquote>
+<h1 id="正义的伦理原则"><a href="#正义的伦理原则" class="headerlink" title="正义的伦理原则"></a>正义的伦理原则</h1><blockquote>
 <p>罗尔斯试图把一种根本的反功利主义的康德式的扭曲赋予自由主义的伦理学，他以一种完全康德的方式,“撤空”了伦理的领域，即清空了所有“病态的”(偶然的.经验的)对象。也就是说，罗尔斯的重要命题是肯定正义之于善的优先性:对正义的定义不得不先于并且独立于我们所认为的善.正义不能从善的观念中被推断出来。</p>
 </blockquote>
 <p>这种态度使得罗尔斯不仅实现了精神分析意义上的“超越快乐原则”，甚至还实现了“超越现实原则”。</p>
@@ -170,6 +232,13 @@
 <p>正义主体可以有以下两种完全互斥的行动方案，但是他们需要达到正义的目的：一是可以完全了解社会，而是可以完全不了解社会；完全地了解社会的主体就可以对所有主体的利益进行分析，对所有有关的对象进行理性的把握以得到功利性的正义，而恰恰是因为把握了所有的对象，这种功利性的对象便消失了其功利性；相反地，如果主体是完全无知的，那么它也可以得到一个能达到正义标准的正义方案，它只需要将判断的权力交给其他所有的主体，找到一个所有主体都会同意的立场</p>
 <p>（那么就会出现以下的问题，相对主义一定有一个答案吗？一定会有一个所有主体都同意的立场吗？找不到！这样就必须换一个新的规则。。。在这个意义上讲罗尔斯对于社会中主体的划分是一种既定僵死的模式（先不讨论））</p>
 <p>在伦理问题上，很重要的一点是权力问题，是哪一种伦理原则站在最高点的问题？？？？？（这可能是上述问题的突破口）</p>
+<h2 id="神圣的牺牲者"><a href="#神圣的牺牲者" class="headerlink" title="神圣的牺牲者"></a>神圣的牺牲者</h2><p>“神圣的牺牲者”是这样的一种悖论，一旦一个人的牺牲与一种神圣的目的所关联，那么他承认有罪是为了一种更大的善，而如果他选择反抗即将要来的审判，强调自己的无辜，那么他便负担了一个更大的罪——忤逆神圣目的的罪</p>
+<p>操纵本身必须由一个天真的相信者的假定来支撑</p>
+<p>精神分析的“社会化”理论——主体从一个前符号的“享乐”的生命实体与象征秩序的相遇中岀现</p>
+<blockquote>
+<p>主体对符号共同体的融入，具有一个被迫选择的结构:理应自由地选择其共同体的主体（因为只有一个自由的选择在道德上才是有约束力的）并不先于这个选择而存在，主体是通过选择被建构起来的。对共同体的选择，“社会契约”，是一个矛盾的选择，<strong>即只有我“做出正确的选择”时， 我才保持了选择的自由：如果我选择了“另一个”共同体.我就会失去自由，失去选择的可能性</strong>（用临床术语说:我选择了精神错乱）。</p>
+</blockquote>
+<p>主体失去可以是欲望的可能，也是“什么都没有”（因为主体根本没有体验过它），失去的The Thing扮演了主体在符号共同体中欲望的剩余</p>
 
         </div>
 
