@@ -13,7 +13,7 @@
 
 
 
-<title>《享受你的症状》感（7） | Hexo</title>
+<title>提高水平努力变现 | Hexo</title>
 
 
 
@@ -127,11 +127,73 @@
                 <div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">《享受你的症状》感（7）</h1>
+            <h1 class="post-title">提高水平努力变现</h1>
             
                 <div class="post-meta">
                     
@@ -140,14 +202,14 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">March 25, 2024&nbsp;&nbsp;18:40:42</a>
+                        Date: <a href="#">March 26, 2024&nbsp;&nbsp;19:47:15</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/%E3%80%8A%E4%BA%AB%E5%8F%97%E4%BD%A0%E7%9A%84%E7%97%87%E7%8A%B6%E3%80%8B%E6%84%9F/">《享受你的症状》感</a>
+                                <a href="/categories/%E8%A1%8C%E5%8A%A8%E6%96%B9%E6%B3%95%E8%AE%BA/">行动方法论</a>
                             
                         </span>
                     
@@ -156,13 +218,68 @@
         </header>
 
         <div class="post-content">
-            <p><img src="/2024/03/25/%E3%80%8A%E4%BA%AB%E5%8F%97%E4%BD%A0%E7%9A%84%E7%97%87%E7%8A%B6%E3%80%8B%E6%84%9F%EF%BC%887%EF%BC%89/1.jpg" alt="1"></p>
-<p>本文于第五周写成</p>
-<p>晚期谢林提出询问世界的本原是什么，世界的原初状态是什么。谢林给出来的答案是世界的原初状态是上帝，这个上帝不是经院哲学里的完满的全知全能的上帝，而是一个与自身不统一，与自身不相容的“断裂的“上帝。上帝在与自身的不一致性对抗的过程中创造出来万物</p>
-<p>其实这个思想，我在早上的马克思主义基本原理课上就考虑过。具体考虑的问题是”白马非马”：我们看到“白马非马”的悖论的时候总是下意识地认为这是错的，仿佛如果我们一旦承认这个论断是对的我们就会得到一个错误的答案而被别人当成一个笨蛋。其实事实恰恰相反，如果我们假设了这是正确的，并继续探索下去，我们可以看到更厉害的知识。具体地，如果我们承认这个悖论所遵循的逻辑，那么我们可以得到马非白马，我们知道这是符号系统和现实的区别</p>
-<p>最重要的是对象a，一个阻止主体实现自身圆满的，阻止主体闭合，始终使得主体敞开的对象a</p>
-<p>为什么康德哲学通常被视为唯心的哲学，不只是因为康德将先天的范畴，先天的认知能力看作是先天的，更在于康德毫无理由的假设了在经验世界外还存在一个现实世界。相反地，我们也就知道了为什么黑格尔的哲学被认为是唯物的，人的理性的极限被黑格尔直接的指认为存在的极限。</p>
-<p>以上面的观点来看，庸俗的马克思主义里的那句经典的“世界是物质的”与康德犯了同样的唯心主义错误。正确的应当是“世界是非意识的”，因为理性和意识本身存在着断裂</p>
+            <h1 id="答疑部分"><a href="#答疑部分" class="headerlink" title="答疑部分"></a>答疑部分</h1><h2 id="方向"><a href="#方向" class="headerlink" title="方向"></a>方向</h2><p>主要方向是高数和线代的答疑</p>
+<h2 id="高数"><a href="#高数" class="headerlink" title="高数"></a>高数</h2><p>目前材料是三大计算和张宇强化，先把这两本搞清楚，应该就能开始收费答疑了</p>
+<p>三大计算：极限，导数，积分</p>
+<p>极限：</p>
+<table>
+<thead>
+<tr>
+<th>我的方法</th>
+<th>杨超&#x2F;张宇</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>迫敛法和积分法 ！</td>
+<td>等价替换</td>
+</tr>
+<tr>
+<td>stolz定理</td>
+<td>泰勒(A&#x2F;B和A-B)</td>
+</tr>
+<tr>
+<td>泰勒展开加洛必达！</td>
+<td>归结原则</td>
+</tr>
+<tr>
+<td>Toeplitz</td>
+<td>单调有界</td>
+</tr>
+<tr>
+<td>拉链定理</td>
+<td>夹逼</td>
+</tr>
+<tr>
+<td>单调有界！</td>
+<td></td>
+</tr>
+<tr>
+<td>归结！</td>
+<td></td>
+</tr>
+<tr>
+<td>Laplace方法</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>求导</p>
+<p>利用导数定义求导</p>
+<p>复合函数求导</p>
+<p>隐函数求导！</p>
+<p>参数方程求导</p>
+<p>分段函数求导</p>
+<p>变限积分函数求导 ！</p>
+<p>高阶导数！</p>
+<p>对数&#x2F;幂指函数求导法！</p>
+<p>积分</p>
+<p>变限积分（张宇）</p>
+<p>区间再现</p>
+<p>除此之外一元微积分部分还就剩数列极限和函数极限证明题，微分中值问题，积分不等式问题</p>
+<p>二元不是重点，主要是计算</p>
 
         </div>
 
@@ -177,7 +294,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://deanjean2.github.io/2024/03/25/%E3%80%8A%E4%BA%AB%E5%8F%97%E4%BD%A0%E7%9A%84%E7%97%87%E7%8A%B6%E3%80%8B%E6%84%9F%EF%BC%887%EF%BC%89/">http://deanjean2.github.io/2024/03/25/%E3%80%8A%E4%BA%AB%E5%8F%97%E4%BD%A0%E7%9A%84%E7%97%87%E7%8A%B6%E3%80%8B%E6%84%9F%EF%BC%887%EF%BC%89/</a></span>
+                        <span><a href="http://deanjean2.github.io/2024/03/26/%E6%8F%90%E9%AB%98%E6%B0%B4%E5%B9%B3%E5%8A%AA%E5%8A%9B%E5%8F%98%E7%8E%B0/">http://deanjean2.github.io/2024/03/26/%E6%8F%90%E9%AB%98%E6%B0%B4%E5%B9%B3%E5%8A%AA%E5%8A%9B%E5%8F%98%E7%8E%B0/</a></span>
                     </p>
                 
                 
@@ -196,9 +313,7 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"># 读后感</a>
-                    
-                        <a href="/tags/%E7%94%9F%E6%B4%BB%E6%8C%87%E5%AF%BC/"># 生活指导</a>
+                        <a href="/tags/%E6%95%B0%E5%AD%A6/"># 数学</a>
                     
                         
                 </span>
@@ -211,10 +326,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2024/03/26/%E6%8F%90%E9%AB%98%E6%B0%B4%E5%B9%B3%E5%8A%AA%E5%8A%9B%E5%8F%98%E7%8E%B0/">提高水平努力变现</a>
             
-            
-            <a class="next" rel="next" href="/2024/03/21/%E3%80%8A%E4%BA%AB%E5%8F%97%E4%BD%A0%E7%9A%84%E7%97%87%E7%8A%B6%E3%80%8B%E6%84%9F%EF%BC%886%EF%BC%89/">《享受你的症状》感（6）</a>
+            <a class="next" rel="next" href="/2024/03/25/%E3%80%8A%E4%BA%AB%E5%8F%97%E4%BD%A0%E7%9A%84%E7%97%87%E7%8A%B6%E3%80%8B%E6%84%9F%EF%BC%887%EF%BC%89/">《享受你的症状》感（7）</a>
             
         </section>
 
