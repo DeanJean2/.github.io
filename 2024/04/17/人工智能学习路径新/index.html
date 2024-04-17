@@ -13,7 +13,7 @@
 
 
 
-<title>chatGPT简述 | Hexo</title>
+<title>人工智能学习路径新 | Hexo</title>
 
 
 
@@ -193,7 +193,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">chatGPT简述</h1>
+            <h1 class="post-title">人工智能学习路径新</h1>
             
                 <div class="post-meta">
                     
@@ -202,7 +202,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">April 13, 2024&nbsp;&nbsp;9:35:43</a>
+                        Date: <a href="#">April 17, 2024&nbsp;&nbsp;10:36:33</a>
                         </span>
                     
                     
@@ -218,56 +218,11 @@
         </header>
 
         <div class="post-content">
-            <h1 id="一、基本工作原理"><a href="#一、基本工作原理" class="headerlink" title="一、基本工作原理"></a>一、基本工作原理</h1><h2 id="基本工作单元"><a href="#基本工作单元" class="headerlink" title="基本工作单元"></a>基本工作单元</h2><p>逐字生成，通过上一个字预测下一个字，然后将已生成文本作为新的材料再预测下一个字（递归地）</p>
-<p>防止瞎猜下一个字：通过预处理使得其能完整的从第一个字生成到最后一个字。</p>
-<p>遇到“白日”后可以接不同的文本，就要通过概率去抽样（很多符号是否都有一个概率分布？）</p>
-<p>怎么识别不同的提问模式？————通过训练使得AGI学会提问的统一规律</p>
-<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ol>
-<li>将语料库完整地让与其自行构建链接（无监督学习）</li>
-<li>将标准模板放入训练，调整回答时正常回答（模板回答）的权重，使得其具备回答的规范性（有监督学习）</li>
-<li>为了使得其能够更好的得到“具有创造力”（本质上是通过是否受到人的喜欢来判别）的答案，通过人工判断，将“具有创造力”的回答的权重调高。（强化学习）</li>
-</ol>
-<h1 id="二、存在隐患"><a href="#二、存在隐患" class="headerlink" title="二、存在隐患"></a>二、存在隐患</h1><p><strong>不同于搜索引擎，材料不是被模型直接记忆，而是用来改进连结。因此没有一个数据库可供我们增删查改</strong></p>
-<p>无法直接操作→存在隐患，要不断调整模型训练才能校正它的所记所学→更新时的效率降低</p>
-<h1 id="三、类人思考的产生"><a href="#三、类人思考的产生" class="headerlink" title="三、类人思考的产生"></a>三、类人思考的产生</h1><p>像人类一样思考是怎么样的？</p>
-<p>人类能怎么样思考？————理解例子、分而治之等等</p>
-<ol>
-<li>理解例子：语境内学习。看似AGI在自己学习，实际上要学的东西已经被提问者给出了</li>
-<li>分而治之</li>
-</ol>
-<h1 id="四、不能真的像人一样"><a href="#四、不能真的像人一样" class="headerlink" title="四、不能真的像人一样"></a>四、不能真的像人一样</h1><p><strong>AGI对于语言的理解只是在于对于符号和符号之间的连结，他不能想象到一个真实的对应物</strong></p>
-<p>待更新</p>
-<h1 id="Transformer"><a href="#Transformer" class="headerlink" title="Transformer"></a>Transformer</h1><p>transformer 其实是一个叫变换器、转换器，电源从 200 伏的 220 伏的电源转到 12 伏</p>
-<blockquote>
-<p>你知道 transformer 一个很重要的东西是，它的整个模型里面有两大部分，一个叫做 encoder，一个叫 decoder，就是编码器和解码器。你给它一个 apple 以后，它在内部会把它给 encode 成 1536 维的一个向量， 1536 个数字。这一堆数字就代表了在它训练模型里面苹果的含义。你还可以把任何一个数字可以把它再给重新给 decode 成文字。但是 decode 成文字的时候，你可以给它各种各样的指令了。比如我要把它用西班牙语 decode，它就会把同样的这 1536 维把它 decode 成 manzana。如果你说用英文，它就会 decode 成apple。这是一个 decode 过程，而 decode 过程它是还可以接着要求你要 decode 多长，多长了以后它会慢慢添油加醋，就越来越添油加醋。比如你要 decode 成十个字，它不但会 decode 成苹果，它会 decode 一个红扑扑的苹果。如果要是你让它 decode 成 1000 个字，它也可以添油加醋的把这 1000 个字都给你 decode 出来。</p>
-</blockquote>
-<p>基本流程：</p>
-<ol>
-<li>encoder把输入变成向量（压缩信息，例如把一个640像素的图像压缩成64）</li>
-<li>decoder在转化（转化的过程伴随着重新增补）</li>
-</ol>
-<h1 id="在decode的时候乱说怎么办？"><a href="#在decode的时候乱说怎么办？" class="headerlink" title="在decode的时候乱说怎么办？"></a>在decode的时候乱说怎么办？</h1><p>乱说分两种：</p>
-<ol>
-<li><ol>
-<li>完全错误的</li>
-<li>decode中的失真</li>
-</ol>
-</li>
-<li><p>还有一种就是人类也会产生的幻觉，一种中立的或是好的幻觉</p>
-</li>
-</ol>
-<h2 id="LLM-分成几个部分，比如一部分是知识基础，一部分是推理能力，一部分是表达能力"><a href="#LLM-分成几个部分，比如一部分是知识基础，一部分是推理能力，一部分是表达能力" class="headerlink" title="LLM 分成几个部分，比如一部分是知识基础，一部分是推理能力，一部分是表达能力"></a>LLM 分成几个部分，比如一部分是知识基础，一部分是推理能力，一部分是表达能力</h2><p>1解决chatGPT的事实性错误：</p>
-<p>知识引擎这部分可以被单独拿出来处理，或者我们那部分就可以接通入互联网</p>
-<p>本地建立一个数据库，embedding（嵌入）：</p>
-<blockquote>
-<p>操作完了以后就忘。其实我们现在用的是这种模式，把整个世界它所遇到的世界都贴满了这样的纸，而不需要去改变 1750 亿的参数中间的任何的参数。</p>
-</blockquote>
-<p>2推理能力：chain of thought 和涌现</p>
-<p>3</p>
-<p>待更新</p>
-<blockquote>
-<p>当我看在中东的沙漠，当你看到一望无垠的、西奈那样的沙漠的时候，你会很感动，你会觉得壮阔、震撼等等你脑子里面的词，但是我可以百分之百地向你保证，沙漠没有意识。所以 ChatGPT 它给你的呈现的东西，我觉得和沙漠和自然给你呈现的东西其实是一种东西。它会让你的内心产生极大的波澜。但是它的内心毫无波澜，它只是往外出字符串，谁让你这么自作多情呢？是这样的一个过程。</p>
-</blockquote>
+            <h1 id="人工智能入门很简单，一两个月入门不是啥问题"><a href="#人工智能入门很简单，一两个月入门不是啥问题" class="headerlink" title="人工智能入门很简单，一两个月入门不是啥问题"></a>人工智能入门很简单，一两个月入门不是啥问题</h1><p>现在是四月17号，一到两个月就是五月17号到六月中旬。</p>
+<p>先来半个月看看效果，一直到五一放假回家这段时间都看人工智能的东西</p>
+<p>这个必须要连续的做，先入门。不然就会进入恶性循环。</p>
+<h1 id="就算完全不学机器学习，直接上手自然语言处理也丝毫没问题"><a href="#就算完全不学机器学习，直接上手自然语言处理也丝毫没问题" class="headerlink" title="就算完全不学机器学习，直接上手自然语言处理也丝毫没问题"></a>就算完全不学机器学习，直接上手自然语言处理也丝毫没问题</h1><p>入门分理论入门和实践入门</p>
+<p>理论：cs224n</p>
 
         </div>
 
@@ -282,7 +237,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://deanjean2.github.io/2024/04/13/chatGPT%E7%AE%80%E8%BF%B0/">http://deanjean2.github.io/2024/04/13/chatGPT%E7%AE%80%E8%BF%B0/</a></span>
+                        <span><a href="http://deanjean2.github.io/2024/04/17/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AD%A6%E4%B9%A0%E8%B7%AF%E5%BE%84%E6%96%B0/">http://deanjean2.github.io/2024/04/17/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AD%A6%E4%B9%A0%E8%B7%AF%E5%BE%84%E6%96%B0/</a></span>
                     </p>
                 
                 
@@ -314,10 +269,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2024/04/17/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AD%A6%E4%B9%A0%E8%B7%AF%E5%BE%84%E6%96%B0/">人工智能学习路径新</a>
             
-            
-            <a class="next" rel="next" href="/2024/04/02/%E3%80%8A%E4%BA%AB%E5%8F%97%E4%BD%A0%E7%9A%84%E7%97%87%E7%8A%B6%E3%80%8B%E6%84%9F%EF%BC%888%EF%BC%89/">《享受你的症状》感（8）</a>
+            <a class="next" rel="next" href="/2024/04/13/chatGPT%E7%AE%80%E8%BF%B0/">chatGPT简述</a>
             
         </section>
 
